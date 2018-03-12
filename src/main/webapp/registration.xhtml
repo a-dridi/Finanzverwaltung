@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Finanzverwaltung - Registration</title>
+    </h:head>
+
+
+
+    <h:body>
+
+        <ui:composition template="./template.xhtml">
+
+            <ui:define name="content">
+                <h2>Registration</h2>
+                <p:messages id="ansichtSQLListen" showDetail="true" autoUpdate="true" />
+                <h:form id="registrationForm">
+
+                    <h:outputText style="color: black" 
+                                  value="Bitte füllen Sie alle Felder!"/> 
+                    <br/>
+                    <b r/>
+
+                    <h:panelGrid columns="3">
+                        <h:outputLabel for="benutzername" value="Benutzername:" />
+                        <p:inputText id="benutzername" value="#{registrationController.benutzername}" required="true">
+                        </p:inputText>
+                        <p:message for="benutzername" />
+
+                        <h:outputLabel for="password" value="Passwort:" />
+                        <p:password id="passwort1" 
+                                    value="#{registrationController.passwort1}" 
+                                    feedback="true" 
+                                    validatorMessage="Passwort muss mindestens 6 Zeichen lang sein!">
+                            <f:validateLength minimum="6" />
+                            <f:validateRequired/>
+                        </p:password>
+                        <p:message for="passwort1" />
+
+                        <h:outputLabel value="Passwort nochmal eingeben:" />
+                        <p:password id="passwort2" 
+                                    value="#{registrationController.passwort2}" 
+                                    required="true">
+                        </p:password>
+
+                        <p:message for="passwort2" />
+
+
+                    </h:panelGrid>
+                    <p:commandButton value="Registrieren" 
+                                     action="#{registrationController.registrieren}"  />
+
+
+
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </h:body>
+</html>
+
