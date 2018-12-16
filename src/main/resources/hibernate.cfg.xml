@@ -10,14 +10,14 @@
         <property name="hibernate.connection.password">PASS</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
         <property name="hibernate.id.new_generator_mappings">true</property>
-        <mapping class="haushaltsverwaltung.model.DatenbankNotizen"/>
-        <mapping class="haushaltsverwaltung.model.Ausgaben"/>
-        <mapping class="haushaltsverwaltung.model.Ausgabenausgabezeitraum"/>
-        <mapping class="haushaltsverwaltung.model.Ausgabenkategorie"/>
-        <mapping class="haushaltsverwaltung.model.Einnahmen"/>
-        <mapping class="haushaltsverwaltung.model.EinnahmenKategorie"/>
-        <mapping class="haushaltsverwaltung.model.Vermoegen"/>
-        <mapping class="haushaltsverwaltung.model.VermoegenJaehrlich"/>
+        <mapping class="at.adridi.finanzverwaltung.model.DatenbankNotizen"/>
+        <mapping class="at.adridi.finanzverwaltung.model.Ausgaben"/>
+        <mapping class="at.adridi.finanzverwaltung.model.Ausgabenausgabezeitraum"/>
+        <mapping class="at.adridi.finanzverwaltung.model.Ausgabenkategorie"/>
+        <mapping class="at.adridi.finanzverwaltung.model.Einnahmen"/>
+        <mapping class="at.adridi.finanzverwaltung.model.EinnahmenKategorie"/>
+        <mapping class="at.adridi.finanzverwaltung.model.Vermoegen"/>
+        <mapping class="at.adridi.finanzverwaltung.model.VermoegenJaehrlich"/>
 
     </session-factory>
 </hibernate-configuration>
